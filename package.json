@@ -20,6 +20,6 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.7",
     "nodemon": "^2.0.16",
-    "window": "^4.2.7"
+    "window": "^1.0.0"
   }
 }

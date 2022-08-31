@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Login from './Components/login';
 import Register from './Components/register';
 import Dashboard from './Components/Dashboard';
 import portfoilo from './Components/portfoilo';
-import "./App.css";
 import { Route, NavLink } from 'react-router-dom';
+import HomePage from './Components/HomePage';
 
 const App = () => {
     const arr = [];
@@ -42,12 +42,17 @@ const App = () => {
     return (
         <>
             {
-                arr[0].length == 0 ? (
+                arr[0].length === 0 ? (
                     <>
                         <div className="navbar">
-                            <NavLink activeClassName="active_class" to="/register"> Register Page </NavLink>
-                            <NavLink activeClassName="active_class" to="/login"> Login Page </NavLink>
+                            <div className="logo">myfolio</div>
+                            <div className="links">
+                                <NavLink activeClassName="active_class" to="/login"> Login Page </NavLink>
+                                <NavLink activeClassName="active_class" to="/register"> Register Page </NavLink>
+                            </div>
                         </div>
+
+                        <HomePage />
 
                         <Route exact path="/login" component={Login} />
                         <Route exact path="/register" component={Register} />
