@@ -1,12 +1,18 @@
+:root {
+    --home-primary: #FFFFFF;
+    --home-yellow: #FBE474;
+    --home-pink: rgba(224, 113, 158, 0.5);
+}
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
+    font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: var(--home-primary);
 }
 
 code {
@@ -14,14 +20,35 @@ code {
         monospace;
 }
 
+button {
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem 2rem;
 
     .links {
         display: flex;
         gap: 0.8rem;
+
+        button {
+            padding: 0.5rem 1rem;
+            outline: none;
+            border: 0.1rem solid transparent;
+            border-radius: 0.3rem;
+
+            &.navLoginBtn {
+                background-color: var(--home-yellow);
+            }
+
+            &.navRegBtn {
+                background-color: var(--home-pink);
+            }
+        }
     }
 }
 

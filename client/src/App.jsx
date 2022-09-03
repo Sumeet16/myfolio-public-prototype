@@ -47,8 +47,12 @@ const App = () => {
                         <div className="navbar">
                             <div className="logo">myfolio</div>
                             <div className="links">
-                                <NavLink activeClassName="active_class" to="/login"> Login Page </NavLink>
-                                <NavLink activeClassName="active_class" to="/register"> Register Page </NavLink>
+                                <NavLink activeClassName="active_class" to="/login">
+                                    <button className='navLoginBtn'>Login</button>
+                                </NavLink>
+                                <NavLink activeClassName="active_class" to="/register">
+                                    <button className='navRegBtn'>Register</button>
+                                </NavLink>
                             </div>
                         </div>
 
