@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
+import useSetBodyColor from '../hooks/bodyColor';
+import styles from '../cssModules/register.module.scss'
 
 const Register = () => {
+
+  useSetBodyColor({color: "#FFFFFF"})
+
   const history = useHistory();
   const [user, setuser] = useState({
     name: "", email: "", password: "", domain: ""
@@ -48,21 +53,24 @@ const Register = () => {
 
   return (
     <>
-      <h1 style={{ textAlign: 'center' }}>Registration Page</h1>
-      <div style={{ width: "100%" }}>
-        <form method='POST'>
-          <label>Enter your full name here: </label>
-          <input type="text" name="name" id="name" value={user.name} onChange={handleInputs} /><br /><br />
-          <label>Enter your email here: </label>
-          <input type="text" name="email" id="email" value={user.email} onChange={handleInputs} /><br /><br />
-          <label>Enter your password here: </label>
-          <input type="password" name="password" id="password" value={user.password} onChange={handleInputs} /><br /><br />
-          <label>Enter your domain name here: </label>
-          <input type="text" name="domain" id="domain" value={user.domain} onChange={handleInputs} /><label> .localhost:3000</label><br /><br />
-          <button type="submit" onClick={postData}>Register</button>
-        </form><br />
-        <label>Already a user </label>
-        <NavLink activeClassName="active_class" to="/login"> Login Page </NavLink>
+      <h1 style={{ textAlign: 'center' }}>Sign Up</h1>
+      <div className={styles.formAndIllsMainContainer}>
+        <div className={styles.formContainer}>
+          <form method='POST'>
+            <div className={styles.inputsContainer}>
+              <input placeholder='Your Full Name' type="text" name="name" id="name" value={user.name} onChange={handleInputs} />
+              <input placeholder='Email' type="text" name="email" id="email" value={user.email} onChange={handleInputs} />
+              <input placeholder='Password' type="password" name="password" id="password" value={user.password} onChange={handleInputs} />
+              <div className={styles.domainInputContainer}>
+                <input placeholder='Enter a domain' type="text" name="domain" id="domain" value={user.domain} onChange={handleInputs} />
+                <p>.localhost:3000</p>
+              </div>
+            </div>
+            <button className={styles.formSubmitBtn} type="submit" onClick={postData}>Register</button>
+          </form>
+          <p>Already have an account? <NavLink activeClassName="active_class" to="/login">Login</NavLink></p>
+        </div>
+        <div className={styles.illsContainer}></div>
       </div>
     </>
   );

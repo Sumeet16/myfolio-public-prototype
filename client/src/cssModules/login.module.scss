@@ -1,0 +1,68 @@
+.formAndIllsMainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .formContainer {
+        max-width: 25rem;
+        width: 80%;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+
+            .inputsContainer {
+                background-color: var(--login-inputs);
+                border: none;
+                border-radius: 0.7rem;
+                padding: 3.5rem 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1.3rem;
+    
+                input {
+                    background-color: transparent;
+                    outline: none;
+                    border: none;
+                    border-bottom: 2px solid var(--text-color-blackGray);
+                    padding: 0.3rem 0rem;
+    
+                    &::placeholder {
+                        color: var(--text-color-blackGray);
+                        font-family: 'Josefin Sans', sans-serif;
+                    }
+                }
+    
+                .domainInputContainer {
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: center;
+                    gap: 0.5rem;
+    
+                    p {
+                        margin-block: 0;
+                    }
+                }
+            }
+    
+            .formSubmitBtn {
+                background-color: var(--home-yellow);
+                width: 100%;
+                outline: none;
+                border: 2px solid transparent;
+                padding: 1rem 1.5rem;
+                font-size: 1.8rem;
+                border-radius: 0.7rem;
+            }
+        }
+
+        p {
+            text-align: center;
+
+            a {
+                color: black;
+            }
+        }
+    }
+}

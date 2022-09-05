@@ -45,7 +45,7 @@ const App = () => {
                 arr[0].length === 0 ? (
                     <>
                         <div className="navbar">
-                            <div className="logo">myfolio</div>
+                            <div className="logo"><NavLink to={'/'}>myfolio</NavLink></div>
                             <div className="links">
                                 <NavLink activeClassName="active_class" to="/login">
                                     <button className='navLoginBtn'>Login</button>

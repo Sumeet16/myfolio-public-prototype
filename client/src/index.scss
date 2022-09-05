@@ -2,6 +2,10 @@
     --home-primary: #FFFFFF;
     --home-yellow: #FBE474;
     --home-pink: rgba(224, 113, 158, 0.5);
+    --text-color-blackGray: #383A48;
+    --text-color-black: #000000;
+    --login-primary: #AAC6FC;
+    --login-inputs: #F3F6E6;
 }
 body {
     margin: 0;
@@ -23,6 +27,10 @@ code {
 button {
     cursor: pointer;
     font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+    color: var(--text-color-black);
 }
 
 .navbar {
