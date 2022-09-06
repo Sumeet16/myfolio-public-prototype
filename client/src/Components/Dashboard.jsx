@@ -43,7 +43,7 @@ const Dashboard = () => {
                     "//" +
                     domainName +
                     "." +
-                    window.location.host} target="_blank"><h1>{userData.domain}.myfolio.fun</h1></a>
+                    window.location.host} target="_blank" rel='noreferrer'><h1>{userData.domain}.myfolio.fun</h1></a>
                 {/* <label htmlFor="">Enter about yourself: </label>
                 <input type="text" name="about" id="about" /><br /><br />
                 <label htmlFor="">Enter anything here: </label>
