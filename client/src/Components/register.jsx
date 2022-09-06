@@ -52,7 +52,7 @@ const Register = () => {
   }
 
   return (
-    <>
+    <main className={styles.mainReg}>
       <h1 style={{ textAlign: 'center' }}>Sign Up</h1>
       <div className={styles.formAndIllsMainContainer}>
         <div className={styles.formContainer}>
@@ -70,9 +70,11 @@ const Register = () => {
           </form>
           <p>Already have an account? <NavLink activeClassName="active_class" to="/login">Login</NavLink></p>
         </div>
-        <div className={styles.illsContainer}></div>
+        <div className={styles.illsContainer}>
+          <img height={'auto'} width={'100%'} src="/regillustration.png" alt="" />
+        </div>
       </div>
-    </>
+    </main>
   );
 };
 

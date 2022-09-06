@@ -7,7 +7,7 @@ const HomePage = () => {
     useSetBodyColor({color: '#FFFFFF'})
     
     return (
-        <main>
+        <main className={styles.mainHome}>
             <section className={styles.homePageHero}>
                 <h1><span className={styles.my}>my</span><span className={styles.folio}>folio</span></h1>
                 <p>create your personal portfolio in minutes!</p>

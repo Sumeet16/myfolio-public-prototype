@@ -4,8 +4,8 @@ import useSetBodyColor from '../hooks/bodyColor';
 import styles from '../cssModules/login.module.scss'
 
 const Login = () => {
-  
-  useSetBodyColor({color: "#AAC6FC"})
+
+  useSetBodyColor({ color: "#AAC6FC" })
 
   const history = useHistory();
   const [email, setemail] = useState('');
@@ -36,7 +36,7 @@ const Login = () => {
   }
 
   return (
-    <>
+    <main className={styles.mainLogin}>
       <h1 style={{ textAlign: 'center' }}>Sign In</h1>
       <div className={styles.formAndIllsMainContainer}>
         <div className={styles.formContainer}>
@@ -49,8 +49,11 @@ const Login = () => {
           </form>
           <p>Not a user? <NavLink activeClassName="active_class" to="/register">Register</NavLink></p>
         </div>
+        <div className={styles.illsContainer}>
+          <img height={'auto'} width={'100%'} src='/loginIllustration.png' alt='' />
+        </div>
       </div>
-    </>
+    </main>
   );
 };
 
